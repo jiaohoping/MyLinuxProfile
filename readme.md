@@ -1,5 +1,5 @@
 # Linux Personalized settings
->本仓库用于存储个人linux配置，如tmux、vim的一些配置等。
+>Store personal linux configuration file
 
 
 ```bash
