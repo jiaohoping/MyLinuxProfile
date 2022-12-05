@@ -24,7 +24,7 @@ call plug#end()
 
 
 
-" 这里是个人设置
+" 这个人设置
 inoremap jj <Esc>
 set nu
 set rnu
