@@ -29,3 +29,6 @@ inoremap jj <Esc>
 set nu
 set rnu
 set hls
+
+" 使得vim将所有数字都当成10进制
+set nrformats=
