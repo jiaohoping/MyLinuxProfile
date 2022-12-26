@@ -4,6 +4,17 @@
 # echo -e "\033[31m 红色字 \033[0m"
 # echo -e "\033[34m 蓝色字 \033[0m"  
 
+function installVimPlug (){
+    PLUG_PATH=~/.vim/autoload/
+    if [[ -d $PLUG_PATH ]];then
+            echo -e "\033[32m COPY plug.vim to $PLUG_PATH \033[0m"
+            mv ./plug.vim $PLUG_PATH
+    else
+            echo -e "\033[32m mkdir $PLUG_PATH and copy plug.vim \033[0m"
+            mkdir -p $PLUG_PATH && mv ./plug.vim $PLUG_PATH
+    fi
+}
+
 
 function copyConfigFile () {
     if [[ -e $HOME/$1 ]]; then
@@ -19,6 +30,6 @@ function copyConfigFile () {
     fi
 }
 
-
+installVimPlug
 copyConfigFile .tmux.conf 
 copyConfigFile .vimrc
