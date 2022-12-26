@@ -7,10 +7,10 @@
 function installVimPlug (){
     PLUG_PATH=~/.vim/autoload/
     if [[ -d $PLUG_PATH ]];then
-            echo -e "\033[32m COPY plug.vim to $PLUG_PATH \033[0m"
+            echo -e "\033[32mcopy plug.vim to $PLUG_PATH \033[0m"
             mv ./plug.vim $PLUG_PATH
     else
-            echo -e "\033[32m mkdir $PLUG_PATH and copy plug.vim \033[0m"
+            echo -e "\033[32mmkdir $PLUG_PATH and copy plug.vim \033[0m"
             mkdir -p $PLUG_PATH && mv ./plug.vim $PLUG_PATH
     fi
 }
@@ -33,3 +33,5 @@ function copyConfigFile () {
 installVimPlug
 copyConfigFile .tmux.conf 
 copyConfigFile .vimrc
+
+echo -e "\033[34mRun \"vim -c PlugInstall\" to install plugins! \033[0m"
