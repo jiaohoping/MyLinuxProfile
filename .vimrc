@@ -19,6 +19,9 @@ Plug 'vim-airline/vim-airline'
 " Python代码格式化插件
 Plug 'tell-k/vim-autopep8'
 
+" 给选中的文本添加双引号等分隔符
+Plug 'tpope/vim-surround'
+
 call plug#end()
 
 
